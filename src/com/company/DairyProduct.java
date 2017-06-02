@@ -7,17 +7,24 @@ import org.slf4j.LoggerFactory;
 import java.time.LocalDate;
 
 /**
- * Created by pbarna on 2017.05.31..
+ * <h1>The DairyProduct class</h1>
+ * Dairy products are probably the most essential parts of the fridge
+ * (for most people at least). Since dairy products has an expiration date, our simulated ones
+ * also have one, as well as a type. The class is built upon the Product class.
+ *
  */
 public class DairyProduct extends Product {
-    private static final Logger logger = LoggerFactory.getLogger(DairyProduct.class);
-    private int temperature;
+//    private static final Logger logger = LoggerFactory.getLogger(DairyProduct.class);
+//    private int temperature;
 
 
     private Type type;
     private LocalDate expDate;
 
     public enum Type{
+        /**
+         * The Dairy product's Type enum contais specific types of milks which decides the expiration date.
+         */
         COW, SOY, COCONUT, HAZELNUT,
     }
     public DairyProduct(){
@@ -41,6 +48,10 @@ public class DairyProduct extends Product {
 
 
     public boolean dairyExpired(){
+        /**
+         * The dairyExpired method below decides whether our dairy product's expiration date is ok.
+         *
+         */
         if (LocalDate.now().isAfter(expDate)){
             return true;
 
@@ -50,15 +61,15 @@ public class DairyProduct extends Product {
     }
 
 
-    public void setTemperature(int temperature) {
-        int oldTemp = this.temperature;
-        this.temperature = temperature;
-        logger.debug("Temperature set to {}. Old temperature was {}.", this.temperature, oldTemp);
-
-        if(this.temperature > 50) {
-            logger.warn("Temperature has risen above 50 degrees.");
-        }else if(this.temperature > 30) {
-            logger.info("Temperature has risen above 30 degrees.");
-        }
-    }
+//    public void setTemperature(int temperature) {
+//        int oldTemp = this.temperature;
+//        this.temperature = temperature;
+//        logger.debug("Temperature set to {}. Old temperature was {}.", this.temperature, oldTemp);
+//
+//        if(this.temperature > 50) {
+//            logger.warn("Temperature has risen above 50 degrees.");
+//        }else if(this.temperature > 30) {
+//            logger.info("Temperature has risen above 30 degrees.");
+//        }
+//    }
 }

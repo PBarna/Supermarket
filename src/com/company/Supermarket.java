@@ -8,23 +8,33 @@ import org.slf4j.LoggerFactory;
 
 
 /**
- * Created by pbarna on 2017.05.31..
+ * <h1>Supermarket simulator 2011</h1>
+ * This is a simple program that simulates specific assets of a real life supermarket.
+ *
+ *@author  Char-acter
  */
+
 public class Supermarket {
 
-    private static final Logger logger = LoggerFactory.getLogger(Supermarket.class);
+//    private static final Logger logger = LoggerFactory.getLogger(Supermarket.class);
 
 
     public static void main(String[] args) {
 
-        logger.info("I am informative!");
+//        logger.info("I am informative!");
+//
+//        DairyProduct w = new DairyProduct();
+//        w.setTemperature(10);
+//        w.setTemperature(29);
+//        w.setTemperature(31);
+//        w.setTemperature(51);
 
-        DairyProduct w = new DairyProduct();
-        w.setTemperature(10);
-        w.setTemperature(29);
-        w.setTemperature(31);
-        w.setTemperature(51);
-
+        /**
+         * <h1>The main method</h1>
+         * Our main method contains a few instances of the possible products of the supermarket
+         * and it also prints them out
+         * @param args Unused.
+         */
 
 
         DairyProduct riska = new DairyProduct("Riska", 10, DairyProduct.Type.COCONUT, LocalDate.of(2017,6,1));

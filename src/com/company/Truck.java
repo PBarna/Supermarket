@@ -1,7 +1,11 @@
 package com.company;
 
 /**
- * Created by pbarna on 2017.05.31..
+ * <h1>The Truck class</h1>
+ * The truck is a bit an out of place product in our case
+ * but this Supermarket only exists on a theoretical level, so just accept it's existense
+ * The Truck class has one parameter: number of wheels
+ * It's built upon the Product class
  */
 public class Truck extends Product {
 

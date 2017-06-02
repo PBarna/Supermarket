@@ -1,7 +1,9 @@
 package com.company;
 
 /**
- * Created by pbarna on 2017.05.31..
+ * <h1>The Product class</h1>
+ * The Product class is the backbone to the whole app,
+ * it waits for two basic parameters: name and quantity
  */
 public abstract class Product {
 
