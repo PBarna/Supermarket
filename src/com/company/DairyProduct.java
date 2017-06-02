@@ -1,12 +1,18 @@
 package com.company;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
 import java.time.LocalDate;
-import java.util.Date;
 
 /**
  * Created by pbarna on 2017.05.31..
  */
 public class DairyProduct extends Product {
+    private static final Logger logger = LoggerFactory.getLogger(DairyProduct.class);
+    private int temperature;
+
 
     private Type type;
     private LocalDate expDate;
@@ -41,5 +47,18 @@ public class DairyProduct extends Product {
         }
         System.out.println("Your product is steel good");
         return false;
+    }
+
+
+    public void setTemperature(int temperature) {
+        int oldTemp = this.temperature;
+        this.temperature = temperature;
+        logger.debug("Temperature set to {}. Old temperature was {}.", this.temperature, oldTemp);
+
+        if(this.temperature > 50) {
+            logger.warn("Temperature has risen above 50 degrees.");
+        }else if(this.temperature > 30) {
+            logger.info("Temperature has risen above 30 degrees.");
+        }
     }
 }

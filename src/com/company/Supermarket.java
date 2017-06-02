@@ -2,15 +2,29 @@ package com.company;
 
 
 import java.time.LocalDate;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
 
 /**
  * Created by pbarna on 2017.05.31..
  */
 public class Supermarket {
 
+    private static final Logger logger = LoggerFactory.getLogger(Supermarket.class);
 
 
     public static void main(String[] args) {
+
+        logger.info("I am informative!");
+
+        DairyProduct w = new DairyProduct();
+        w.setTemperature(10);
+        w.setTemperature(29);
+        w.setTemperature(31);
+        w.setTemperature(51);
+
 
 
         DairyProduct riska = new DairyProduct("Riska", 10, DairyProduct.Type.COCONUT, LocalDate.of(2017,6,1));
